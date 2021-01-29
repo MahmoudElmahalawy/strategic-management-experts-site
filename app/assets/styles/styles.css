@@ -109,12 +109,6 @@
   margin-top: 22px;
 }
 
-@media screen and (max-width: 560px) {
-  .navbar-menu {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .navbar-menu {
     display: none;
@@ -134,9 +128,70 @@
   border-radius: 20px;
 }
 
-.hero__picture {
+@media screen and (max-width: 768px) {
+  .navbar-menu--visible {
+    display: block;
+    background-color: #00445c;
+    margin-top: 73px;
+    height: 200px;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .navbar-menu--visible ul {
+    margin-top: 10px;
+  }
+  .navbar-menu--visible ul li {
+    display: list-item;
+    text-align: center;
+    line-height: 2.25rem;
+  }
+}
+
+.hero__container {
   text-align: center;
+}
+
+.hero__picture {
+  background-image: url(../images/hero.png);
+  width: 100vw;
   height: 200px;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position-y: 150%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 1086px) {
+  .hero__picture {
+    height: 250px;
+  }
+}
+
+.hero__title {
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hero__title--orange {
+  color: #fd6b17;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 0.925rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero__title {
+    font-size: 0.875rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
