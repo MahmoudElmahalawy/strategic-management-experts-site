@@ -1,0 +1,26 @@
+.footer {
+    position: relative;
+    background-color: $teal;
+
+    &__copyright {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 0.875rem;
+
+        @media screen and (max-width: 600px) {
+            max-width: 350px;
+        }
+    }
+
+    &__logo {
+        float: right;
+
+        img {
+            border: 1px white solid;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+    }
+}

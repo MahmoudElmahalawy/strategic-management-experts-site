@@ -47,6 +47,15 @@
         height: 90px;
         background-color: white;
         opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            top: 165px;
+        }
 
         &--expand {
             position: absolute;
@@ -59,6 +68,14 @@
             color: $teal;
             border: 1px $teal solid;
             text-transform: uppercase;
+
+            @include tablet {
+                left: 40%;
+            }
+
+            @include mobile {
+                left: 50%;
+            }
         }
 
         &:hover {

@@ -72,6 +72,12 @@
             @include small-desktop {
                 padding: 0 1rem;
             }
+
+            &--bullets {
+                color: $orange;
+                font-size: 1.25rem;
+                line-height: 0.8;
+            }
         }
 
         &__expand-btn {
