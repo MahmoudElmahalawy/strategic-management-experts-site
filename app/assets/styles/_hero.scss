@@ -42,13 +42,17 @@
             color:  $orange;
         }
 
+        @include small-desktop {
+            top: 12%;
+        }
+
         @include tablet {
             font-size: 0.925rem;
         }
 
         @include mobile {
             font-size: 0.75rem;
-            top: 130px;
+            top: 15%;
             width: 90%;
         }
     }

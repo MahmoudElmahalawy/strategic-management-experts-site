@@ -1,0 +1,70 @@
+// .training-item {
+//     margin-bottom: 4rem;
+
+//     &__title {
+//         margin-bottom: 20px;
+//     }
+// }
+
+.training-item {
+    position: relative;
+    margin-bottom: 5rem;
+    
+    p {
+        line-height: 1.4;
+    }
+    
+    @include atSmall {
+        padding-left: 94px;
+    }
+
+    &__icon {
+        display: block;
+        margin: 0 auto;
+
+        @include atSmall {
+            position: absolute;
+            left: 0;
+        }
+
+        @include mobile {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__title {
+        padding-bottom: 1.8rem;
+        color: $orange;
+        font-weight: 700;
+    }
+
+    &__content {
+        // display: none;
+        position: absolute;
+        top: 25px;
+        width: 450px;
+        height: 90px;
+        background-color: white;
+        opacity: 0;
+
+        &--expand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 20px;
+            color: $teal;
+            border: 1px $teal solid;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            // display: block;
+            opacity: 1;
+        }
+    }
+
+}

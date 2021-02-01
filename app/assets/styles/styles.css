@@ -278,6 +278,29 @@ html {
   }
 }
 
+.page-section {
+  padding: 70px 0;
+  height: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.25rem;
+  text-transform: uppercase;
+  color: #00445c;
+  margin: 2.5rem 0;
+}
+
+.section-title--orange {
+  color: #fd6b17;
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
 .hero__container {
   text-align: center;
 }
@@ -313,6 +336,12 @@ html {
   color: #fd6b17;
 }
 
+@media screen and (max-width: 1086px) {
+  .hero__title {
+    top: 12%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .hero__title {
     font-size: 0.925rem;
@@ -322,15 +351,14 @@ html {
 @media screen and (max-width: 560px) {
   .hero__title {
     font-size: 0.75rem;
-    top: 130px;
+    top: 15%;
     width: 90%;
   }
 }
 
 .home-intro {
   background-color: #f1f1f2;
-  padding: 70px 0 0 0;
-  height: auto;
+  padding-bottom: 0;
 }
 
 .home-intro__tile {
@@ -380,7 +408,7 @@ html {
   text-align: justify;
   text-justify: distribute;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-top: 0.5rem;
   margin-bottom: 2.8125rem;
   text-justify: inter-word;
@@ -413,11 +441,147 @@ html {
 
 .home-intro::after {
   content: "";
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #efefef), to(white));
-  background-image: linear-gradient(180deg, #efefef 50%, white 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f1f1f2), to(white));
+  background-image: linear-gradient(180deg, #f1f1f2 50%, white 100%);
   display: block;
   height: 100px;
   -webkit-clip-path: polygon(50% 0%, 80% 100%, 100% 100%, 0 100%, 20% 100%);
           clip-path: polygon(50% 0%, 80% 100%, 100% 100%, 0 100%, 20% 100%);
+}
+
+.our-training {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .our-training {
+    text-align: center;
+  }
+}
+
+.our-training__subtitle {
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 0.5rem 1rem;
+  outline: #f1f1f2 1px solid;
+}
+
+.our-training__subtitle--orange {
+  color: #fd6b17;
+}
+
+@media screen and (max-width: 560px) {
+  .our-training__subtitle {
+    margin-bottom: 3rem;
+  }
+}
+
+.our-training__icon {
+  text-align: center;
+}
+
+.our-training__icon img {
+  position: relative;
+  border: 5px solid #efefef;
+  border-radius: 10px;
+}
+
+.training-item {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.training-item p {
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 560px) {
+  .training-item {
+    padding-left: 94px;
+  }
+}
+
+.training-item__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) {
+  .training-item__icon {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .training-item__icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.training-item__title {
+  padding-bottom: 1.8rem;
+  color: #fd6b17;
+  font-weight: 700;
+}
+
+.training-item__content {
+  position: absolute;
+  top: 25px;
+  width: 450px;
+  height: 90px;
+  background-color: white;
+  opacity: 0;
+}
+
+.training-item__content--expand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 20px;
+  color: #00445c;
+  border: 1px #00445c solid;
+  text-transform: uppercase;
+}
+
+.training-item__content:hover {
+  opacity: 1;
+}
+
+.map-location {
+  position: relative;
+}
+
+.map-location__icon {
+  position: absolute;
+  top: -50px;
+  z-index: 99;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.map-location__icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 500px;
+  background-color: #00445c;
+  left: -210.5%;
+  bottom: 50%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 560px) {
+  .map-location__icon::before {
+    width: 300px;
+    left: -106.25%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
