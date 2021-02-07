@@ -1,0 +1,29 @@
+.news {
+    padding-top: 4rem;
+    // margin-bottom: 4rem;
+    background-color: $grey;
+
+    &__tile {
+        background-color: white;
+        margin-bottom: 4rem;
+
+        &__expand-btn {
+            // overflow: auto;
+            // z-index: 999999 !important;
+            text-decoration: none;
+            color: white;
+            background-color: $orange;
+            border-radius: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -1.2rem;
+            padding: 5px 25px;
+
+            &:hover {
+                background-color: $teal;
+                color: white;
+            }
+        }
+    }
+}

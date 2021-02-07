@@ -37,6 +37,7 @@
     ul {
         list-style: none;
         // display: inline;
+        // margin-top: -1.25rem;
     }
 
     ul li {
@@ -62,7 +63,7 @@
     // position: absolute;
     // top: 50%;
     // transform: translateY(-50%);
-    margin-top: 22px;
+    margin-top: 12px;
     
     &__links {
         // display: flex;
@@ -84,12 +85,14 @@
         display: block;
         background-color: $teal;
         margin-top: 72px;
-        height: 200px;
+        height: 220px;
         width: 100%;
         transition: all 0.3s ease-out;
 
         ul {
             margin-top: 10px;
+            // margin-bottom: 10px;
+            display: inline;
         }
 
         ul li {
@@ -99,3 +102,110 @@
         }
     }
 }
+
+
+
+.dropdown {
+    display: inline-block;
+    // height: 39px;
+}
+
+.dropbtn {
+    height: 39px;
+    line-height: 20px;
+}
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+    // font-size: 17px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    color: white;
+    text-transform: uppercase;
+    // padding: 10px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 20px;
+    background-color: $orange;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+    @include tablet {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: $teal;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+    @include tablet {
+        text-align: center;
+        line-height: 1.2rem;
+    }
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba($color: #FFF, $alpha: 0.2);
+    border-radius: 20px;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+    border-radius: 20px;
+    background-color: $grey;
+    color: $teal;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+//   @media screen and (max-width: 600px) {
+//     .topnav a:not(:first-child), .dropdown .dropbtn {
+    //       display: none;
+    //     }
+    //     .topnav a.icon {
+        //       float: right;
+        //       display: block;
+        //     }
+        //   }
+        
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        //   @media screen and (max-width: 600px) {
+            //     .topnav.responsive {position: relative;}
+            //     .topnav.responsive a.icon {
+                //       position: absolute;
+                //       right: 0;
+                //       top: 0;
+                //     }
+                //     .topnav.responsive a {
+                    //       float: none;
+                    //       display: block;
+                    //       text-align: left;
+                    //     }
+                    //     .topnav.responsive .dropdown {float: none;}
+                    //     .topnav.responsive .dropdown-content {position: relative;}
+                    //     .topnav.responsive .dropdown .dropbtn {
+                        //       display: block;
+                        //       width: 100%;
+                        //       text-align: left;
+                        //     }
+                        //   }

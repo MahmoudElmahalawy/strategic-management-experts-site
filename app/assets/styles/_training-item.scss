@@ -42,7 +42,7 @@
     &__content {
         // display: none;
         position: absolute;
-        top: 25px;
+        top: 50px;
         width: 450px;
         height: 90px;
         background-color: white;
@@ -54,7 +54,7 @@
         }
 
         @include mobile {
-            top: 165px;
+            top: 190px;
         }
 
         &--expand {

@@ -1,0 +1,97 @@
+.contact {
+    padding-top: 5rem;
+    background-color: $grey;
+    // input {
+    //     padding: 6px 12px;
+    //     margin-bottom: 15px;
+    // }
+    &__form {
+        &__title {
+            // text-transform: capitalize;
+            margin-bottom: 2.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $orange;
+        }
+    
+        &__btn {
+            background-color: $orange;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 0%;
+            font-size: 0.9rem;
+            padding: 0.5rem 2rem;
+
+            &:hover {
+                background-color: $teal;
+                color: white;
+            }
+        }
+    }
+
+    &__info {
+        padding-left: 2rem;
+        font-size: 0.925rem;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            padding-left: 0;
+            margin-top: 2rem;
+            
+        }
+
+        svg {
+            margin-right: 1rem;
+        }
+
+        &__title {
+            margin-bottom: 2.5rem;
+            font-size: 1.25rem;
+            color: $orange;
+            
+        }
+
+        &__details {
+            line-height: 2;
+            margin-bottom: 3rem;
+        }
+
+        &__social-media {
+            svg {
+                transform: scale(1.5);
+                margin-right: 2rem;
+                color: $teal;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $orange;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            @include atLarge {
+                margin-top: -15px;
+            }
+
+            @include tablet {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.form-control {
+    padding: 8px 12px;
+    background-color: $grey;
+
+    &::placeholder {
+        font-size: 0.9rem;
+    }
+
+    &:focus { 
+        outline: none !important;
+        background-color: $grey;
+        border-color: $orange;
+        box-shadow: 0 0 2px $orange;
+    }
+}

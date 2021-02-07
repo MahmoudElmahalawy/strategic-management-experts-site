@@ -11,6 +11,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -186,7 +197,7 @@ html {
 }
 
 .navbar-menu {
-  margin-top: 22px;
+  margin-top: 12px;
 }
 
 @media screen and (max-width: 768px) {
@@ -213,13 +224,14 @@ html {
     display: block;
     background-color: #00445c;
     margin-top: 72px;
-    height: 200px;
+    height: 220px;
     width: 100%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
   }
   .navbar-menu--visible ul {
     margin-top: 10px;
+    display: inline;
   }
   .navbar-menu--visible ul li {
     display: list-item;
@@ -228,6 +240,84 @@ html {
   }
 }
 
+.dropdown {
+  display: inline-block;
+}
+
+.dropbtn {
+  height: 39px;
+  line-height: 20px;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-weight: 800;
+  border: none;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #fd6b17;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #00445c;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content a {
+    text-align: center;
+    line-height: 1.2rem;
+  }
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  border-radius: 20px;
+  background-color: #f1f1f2;
+  color: #00445c;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 768px) {
   .menu-btn {
     width: 25px;
@@ -301,6 +391,10 @@ html {
   }
 }
 
+.hero {
+  display: block;
+}
+
 .hero__container {
   text-align: center;
 }
@@ -326,7 +420,7 @@ html {
   color: white;
   font-weight: 800;
   position: absolute;
-  top: 100px;
+  top: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -336,7 +430,19 @@ html {
   color: #fd6b17;
 }
 
-@media screen and (max-width: 1086px) {
+@media screen and (max-width: 1340px) {
+  .hero__title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1340px) {
   .hero__title {
     top: 12%;
   }
@@ -344,7 +450,7 @@ html {
 
 @media screen and (max-width: 768px) {
   .hero__title {
-    font-size: 0.925rem;
+    top: 13%;
   }
 }
 
@@ -534,7 +640,7 @@ html {
 
 .training-item__content {
   position: absolute;
-  top: 25px;
+  top: 50px;
   width: 450px;
   height: 90px;
   background-color: white;
@@ -551,7 +657,7 @@ html {
 
 @media screen and (max-width: 560px) {
   .training-item__content {
-    top: 165px;
+    top: 190px;
   }
 }
 
@@ -592,7 +698,7 @@ html {
 .map-location__icon {
   position: absolute;
   top: -50px;
-  z-index: 99;
+  z-index: 9;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -619,7 +725,12 @@ html {
 
 .footer {
   position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #00445c;
+  min-height: 100%;
+  height: 75px;
 }
 
 .footer__copyright {
@@ -631,9 +742,19 @@ html {
   font-size: 0.875rem;
 }
 
+.footer__copyright p {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 600px) {
   .footer__copyright {
-    max-width: 350px;
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer__copyright {
+    font-size: 0.8rem;
   }
 }
 
@@ -642,8 +763,154 @@ html {
 }
 
 .footer__logo img {
+  width: 75px;
+  height: 75px;
   border: 1px white solid;
   border-top: none;
   border-radius: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 560px) {
+  .footer__logo img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.contact {
+  padding-top: 5rem;
+  background-color: #f1f1f2;
+}
+
+.contact__form__title {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fd6b17;
+}
+
+.contact__form__btn {
+  background-color: #fd6b17;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0%;
+  font-size: 0.9rem;
+  padding: 0.5rem 2rem;
+}
+
+.contact__form__btn:hover {
+  background-color: #00445c;
+  color: white;
+}
+
+.contact__info {
+  padding-left: 2rem;
+  font-size: 0.925rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contact__info {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+.contact__info svg {
+  margin-right: 1rem;
+}
+
+.contact__info__title {
+  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+  color: #fd6b17;
+}
+
+.contact__info__details {
+  line-height: 2;
+  margin-bottom: 3rem;
+}
+
+.contact__info__social-media svg {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 2rem;
+  color: #00445c;
+}
+
+.contact__info__social-media svg:hover {
+  cursor: pointer;
+  color: #fd6b17;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1086px) {
+  .contact__info__social-media {
+    margin-top: -15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__info__social-media {
+    text-align: center;
+  }
+}
+
+.form-control {
+  padding: 8px 12px;
+  background-color: #f1f1f2;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size: 0.9rem;
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 0.9rem;
+}
+
+.form-control::-ms-input-placeholder {
+  font-size: 0.9rem;
+}
+
+.form-control::placeholder {
+  font-size: 0.9rem;
+}
+
+.form-control:focus {
+  outline: none !important;
+  background-color: #f1f1f2;
+  border-color: #fd6b17;
+  -webkit-box-shadow: 0 0 2px #fd6b17;
+          box-shadow: 0 0 2px #fd6b17;
+}
+
+.news {
+  padding-top: 4rem;
+  background-color: #f1f1f2;
+}
+
+.news__tile {
+  background-color: white;
+  margin-bottom: 4rem;
+}
+
+.news__tile__expand-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #fd6b17;
+  border-radius: none;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -1.2rem;
+  padding: 5px 25px;
+}
+
+.news__tile__expand-btn:hover {
+  background-color: #00445c;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
