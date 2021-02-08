@@ -913,4 +913,186 @@ body {
   background-color: #00445c;
   color: white;
 }
+
+.training {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f1f1f2;
+}
+
+.training__nav {
+  position: absolute;
+  top: 100px;
+  color: white;
+}
+
+.training__logo {
+  margin-right: 1rem;
+}
+
+.training__title {
+  color: #00445c;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.training__content {
+  text-align: justify;
+}
+
+.training__content--orange {
+  color: #fd6b17;
+}
+
+.training__content--right-padding {
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 1086px) {
+  .training__content {
+    font-size: 0.8rem;
+  }
+}
+
+.training__img {
+  padding-top: 1rem;
+  padding-left: 4rem;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .training__img {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .training__img {
+    padding-left: 0;
+  }
+}
+
+/* Tabs */
+.tabs {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 5rem;
+  height: auto;
+  position: relative;
+}
+
+.tabs::before {
+  content: "";
+  display: block;
+  background-color: #f1f1f2;
+  height: 27px;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+}
+
+.tabs__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tabs__header {
+    display: block;
+  }
+}
+
+.tabs__heading {
+  text-transform: capitalize;
+  font-weight: 800;
+  text-align: center;
+  color: #00445c;
+  background-color: #f1f1f2;
+  border: 5px solid white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 30px;
+}
+
+.tabs__heading:nth-child(1) {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .tabs__heading {
+    margin-left: 0;
+  }
+}
+
+.tabs__heading:hover {
+  background-color: white;
+  color: #fd6b17;
+}
+
+.tabs__heading.is-active {
+  background-color: white;
+  color: #fd6b17;
+}
+
+.tabs__content {
+  background-color: white;
+  display: none;
+}
+
+.tabs__content.is-active {
+  display: block;
+}
+
+.course-list ul {
+  list-style: none;
+  /* Remove default bullets */
+  -webkit-columns: 2;
+          columns: 2;
+}
+
+.course-list ul li::before {
+  content: "\203A";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #00445c;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+  margin-right: 1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.course-list__title {
+  color: #fd6b17;
+  margin-bottom: 2rem;
+}
+
+.course-list__list-item {
+  text-decoration: none;
+  line-height: 3;
+  color: #00445c;
+}
+
+.course-list__list-item:hover {
+  color: #fd6b17;
+}
 /*# sourceMappingURL=styles.css.map */
