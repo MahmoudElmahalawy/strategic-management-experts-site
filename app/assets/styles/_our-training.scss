@@ -13,6 +13,10 @@
         padding: 0.5rem 1rem;
         outline: $grey 1px solid;
 
+        p {
+            margin-bottom: 0;
+        }
+
     
         &--orange {
             color: $orange;

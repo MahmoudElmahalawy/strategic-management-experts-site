@@ -578,6 +578,10 @@ body {
   outline: #f1f1f2 1px solid;
 }
 
+.our-training__subtitle p {
+  margin-bottom: 0;
+}
+
 .our-training__subtitle--orange {
   color: #fd6b17;
 }
@@ -618,6 +622,18 @@ body {
   margin: 0 auto;
 }
 
+.training-item__icon img:last-child {
+  display: none;
+}
+
+.training-item__icon:hover img:last-child {
+  display: block;
+}
+
+.training-item__icon:hover img:first-child {
+  display: none;
+}
+
 @media screen and (min-width: 560px) {
   .training-item__icon {
     position: absolute;
@@ -649,6 +665,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 1105px) and (min-width: 768px) {
+  .training-item__content {
+    top: 95px;
+    height: 150px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .training-item__content {
     width: 100%;
@@ -673,6 +696,13 @@ body {
   color: #00445c;
   border: 1px #00445c solid;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1105px) and (min-width: 768px) {
+  .training-item__content--expand {
+    left: 30%;
+    top: 30%;
+  }
 }
 
 @media screen and (max-width: 768px) {

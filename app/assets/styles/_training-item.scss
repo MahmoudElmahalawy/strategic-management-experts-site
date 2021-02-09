@@ -22,6 +22,16 @@
         display: block;
         margin: 0 auto;
 
+        img:last-child {
+            display: none;
+        }
+        &:hover img:last-child {
+            display: block;
+        }
+        &:hover img:first-child {
+            display: none;
+        }
+
         @include atSmall {
             position: absolute;
             left: 0;
@@ -49,6 +59,11 @@
         opacity: 0;
         transition: all 0.3s ease-in-out;
 
+        @media screen and (max-width: 1105px) and (min-width: 768px) {
+            top: 95px;
+            height: 150px;
+        }
+
         @include tablet {
             width: 100%;
         }
@@ -68,6 +83,11 @@
             color: $teal;
             border: 1px $teal solid;
             text-transform: uppercase;
+
+            @media screen and (max-width: 1105px) and (min-width: 768px) {
+                left: 30%;
+                top: 30%;
+            }
 
             @include tablet {
                 left: 40%;
